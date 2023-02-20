@@ -15,12 +15,17 @@ function showArray(){
 
     var items_div = document.getElementById("Items");
 
-    //hier for-loop schrijven: met de for-loop lijn 20 tot en met 23 aanspreken (dit komt in de for loop, hiermee looped hij door de array heen en heb je spans voor alle indexitems)
+    
+    var arrayLength = parts.length
+    
+    for (let i=0; i < arrayLength; i++){
 
-    //var createItem = document.createElement("span");
-    //createItem.textContent = parts[i];
-    //console.log(createItem);
-    //items_div.appendChild(createItem);
+    var createItem = document.createElement("span");
+    createItem.textContent = parts[i];
+    console.log(createItem);
+    items_div.appendChild(createItem);
+
+
 
         console.log("items div = ");
         console.log(items_div);
@@ -32,6 +37,9 @@ function spanFunction(){
     onclick.items_span = (" ")
 
 }
+
+}
+
 
 // voer alleen code uit als de gehele pagina is ingeladen
 document.onreadystatechange = function () {

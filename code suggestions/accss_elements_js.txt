@@ -1,0 +1,28 @@
+// create a new <div> element
+const newDiv = document.createElement("div");
+
+// set the ID of the new <div> to "myNewDiv"
+newDiv.setAttribute("id", "myNewDiv");
+
+// add the new <div> to the page
+document.body.appendChild(newDiv);
+
+
+// get the <div> element with ID "myNewDiv"
+const myNewDiv = document.getElementById("myNewDiv");
+
+// get all <div> elements with class "myClass"
+const myDivs = document.getElementsByClassName("myClass");
+
+
+// create a new <div> element
+const newDiv = document.createElement("div");
+
+// add some text to the new <div>
+newDiv.textContent = "Hello, world!";
+
+// store a reference to the new <div>
+const myNewDiv = document.body.appendChild(newDiv);
+
+// later, you can access the <div> element via the reference
+myNewDiv.style.color = "red";
