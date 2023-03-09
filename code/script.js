@@ -2,50 +2,78 @@
 
 //array voor drumKit, bestaande uit de onderdelen die je met een loop moet ophalen in selected items
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-function showArray(){
-    const parts = [
-        "high-hat",
-        "snare",
-        "kick",
-        "crash",
-    ]
+const parts = [
+  "High-Hat",
+  "Snare",
+  "Kick",
+  "Crash",
+  "Ride",
+  "Tom1",
+  "Tom2",
+  "Floor-Tom"
+];
 
+function showArray() {
+  var items_div = document.getElementById("Items");
+  var arrayLength = parts.length;
 
+  for (let i = 0; i < arrayLength; i++) {
+      var createItem = document.createElement("div");
+      createItem.setAttribute("id", parts[i]);
+      createItem.textContent = parts[i];
+      items_div.appendChild(createItem);
+  }
+}
 
-    var items_div = document.getElementById("Items");
-
+function dragElement(elmnt) {
+  var pos1 = 0,
+      pos2 = 0,
+      pos3 = 0,
+      pos4 = 0;
     
-    var arrayLength = parts.length
-    
-    for (let i=0; i < arrayLength; i++){
+  if (document.getElementById(elmnt.id)) {
+      document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  
+  } else {
+      elmnt.onmousedown = dragMouseDown;
+  }
 
-    var createItem = document.createElement("span");
-    createItem.textContent = parts[i];
-    console.log(createItem);
-    items_div.appendChild(createItem);
+  function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+      
+  }
 
+  function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 
+      
+  }
 
-        console.log("items div = ");
-        console.log(items_div);
-        console.log("parts array = ");
-        console.log(parts);
+  function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+  }
+ 
 }
 
-function spanFunction(){
-    onclick.items_span = (" ")
+document.addEventListener("DOMContentLoaded", function() {
+  showArray();
+  var arrayLength = parts.length;
+  for (let i = 0; i < arrayLength; i++) {
+      dragElement(document.getElementById(parts[i]));
+  }
+});
 
-}
-
-}
-
-
-// voer alleen code uit als de gehele pagina is ingeladen
-document.onreadystatechange = function () {
-    if (document.readyState == "interactive") {
-        // Initialize your application or run some code.
-        showArray()
-    }
-}
 
