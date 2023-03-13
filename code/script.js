@@ -21,9 +21,22 @@ function showArray() {
       var createItem = document.createElement("div");
       createItem.setAttribute("id", parts[i]);
       createItem.textContent = parts[i];
-      items_div.appendChild(createItem);
+      items_div.appendChild(createItem); 
   }
+
+  console.log("items div = ");
+  console.log(items_div);
+  console.log("parts array = ");
+  console.log(parts);
+  
+
+  //Haal hier index nummers op
+  console.log("index = ");
+  console.log(parts.indexOf/*insert parts variable name between blue brackets . Dont forget quotes.*/("Tom1"));
+  
+  
 }
+
 
 function dragElement(elmnt) {
   var pos1 = 0,
@@ -67,6 +80,7 @@ function dragElement(elmnt) {
   }
  
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   showArray();
