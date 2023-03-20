@@ -1,5 +1,7 @@
-//!sample code!
+//!sample code! add /**/ after reading and start writing
+//note to self: ga stap voor stap door d3 code van de site heen en pas aan op je eigen code als je dat lukt
 
+/*
 //draggable element 
 const item = document.querySelector('.draggableBox');
 
@@ -51,3 +53,9 @@ function drop(e) {
     // display the draggable element
     draggable.classList.remove('hide');
 }
+
+//end sample code
+*/
+
+//start own code
+

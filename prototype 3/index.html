@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="query.css">
+     
+        <script src="script.js"></script>
+
+        <style>
+            
+        </style>
+
+
+
+    </head>
+    
+        <body>
+
+            <div class="main"> 
+                    <div class="drumParts">
+                        <div id="partDiv" class="high-hatDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <span id="dragTarget" draggable="true" ondragstart="drag(event)">
+                             High-hat
+                             </span>
+                        </div>
+                    </div>
+
+                <div class="drumKitLayout">
+                    <div id="droptTarget" class="high-hatTarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                
+            </div>
+    
+        </body>
+     
+    </html>
