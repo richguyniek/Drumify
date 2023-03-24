@@ -21,7 +21,7 @@ body{
     flex-direction: column;
 }
 
-.drumParts{
+.drum_parts{
     height: 200px;
     width: 1000px;
     display: flex;
@@ -31,9 +31,25 @@ body{
 
 /*Insert drumparts CSS styling here*/
 
+.high_hat_div{
+    background-color: grey;
+    width:100px;
+    height: 20px;
+}
+
+.snare_div{
+    background-color: grey;
+    width:100px;
+    height: 20px;
+}
+
 /*End drumparts styling*/
 
-.drumKitLayout{
+/*----------------------*/
+
+/*Insert layout and drop target styling here*/
+
+.drum_kit_layout_style{
     height: 500px;
     width: 1000px;
     display: grid;
@@ -41,7 +57,7 @@ body{
     grid-template-rows: repeat(5, 1fr);
 }
 
-.high-hatTarget{
+.high_hat_target_style{
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
@@ -49,8 +65,13 @@ body{
     background-color: lightblue ;
 }
 
-.high-hatDiv{
-    background-color: grey;
-    width:100px;
-    height: 20px;
+.snare_target_style{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: blue ;
 }
+
+
+/*End layout styling*/

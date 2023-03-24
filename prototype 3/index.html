@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="query.css">
      
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
 
         <style>
             
@@ -18,23 +18,32 @@
 
     </head>
     
+   
         <body>
 
             <div class="main"> 
-                    <div class="drumParts">
-                        <div id="partDiv" class="high-hatDiv" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <span id="dragTarget" draggable="true" ondragstart="drag(event)">
+                    <div class="drum_parts">
+                        <div id="part_div" class="high_hat_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <span id="drag_target" draggable="true" ondragstart="drag(event)">
                              High-hat
+                             </span>
+                        </div>
+                        <div id="part_div" class="snare_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <span id="drag_target" draggable="true" ondragstart="drag(event)">
+                             Snare
                              </span>
                         </div>
                     </div>
 
-                <div class="drumKitLayout">
-                    <div id="droptTarget" class="high-hatTarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="drum_kit_layout_scripter" class="drum_kit_layout_style">
+                    <div id="hat_drop_target" class="high_hat_target_style" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="snare_drop_target" class="snare_target_style" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                 </div>
                 
             </div>
     
         </body>
+       
+
      
     </html>
