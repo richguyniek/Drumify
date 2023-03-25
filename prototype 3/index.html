@@ -22,25 +22,79 @@
         <body>
 
             <div class="main"> 
-                    <div class="drum_parts">
-                        <div id="part_div" class="high_hat_div" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <span id="drag_target" draggable="true" ondragstart="drag(event)">
-                             High-hat
-                             </span>
-                        </div>
-                        <div id="part_div" class="snare_div" ondrop="drop(event)" ondragover="allowDrop(event)">
-                            <span id="drag_target" draggable="true" ondragstart="drag(event)">
-                             Snare
-                             </span>
-                        </div>
+                <div class="drum_parts">
+                    <div id="part_div" class="high_hat_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="high-hat">
+                        High-hat
+                      </span>
+                    </div>
+                    <div id="part_div" class="snare_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="snare">
+                        Snare
+                      </span>
+                    </div>
+                    <div id="part_div" class="kick_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="kick">
+                        Kick
+                      </span>
+                    </div>
+                    <div id="part_div" class="tom1_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="tom1">
+                        Tom 1
+                      </span>
+                    </div>
+                    <div id="part_div" class="tom2_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="tom2">
+                        Tom 2
+                      </span>
+                    </div>
+                    <div id="part_div" class="crash_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="crash">
+                        Crash
+                      </span>
+                    </div>
+                    <div id="part_div" class="ride_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="ride">
+                        Ride
+                      </span>
+                    </div>
+                    <div id="part_div" class="floor_tom_div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                      <span id="drag_target" draggable="true" ondragstart="drag(event)" data-part-type="floor-tom">
+                        Floor Tom
+                      </span>
+                    </div>
+                  </div>
+               
+    
+                <div id="drum_kit_layout_scripter" class="drum_kit_layout_style">
+                    
+                    <div id="hat_drop_target" class="high_hat_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
                     </div>
 
-                <div id="drum_kit_layout_scripter" class="drum_kit_layout_style">
-                    <div id="hat_drop_target" class="high_hat_target_style" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                    <div id="snare_drop_target" class="snare_target_style" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="snare_drop_target" class="snare_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div id="kick_drop_target" class="kick_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div id="tom1_drop_target" class="tom1_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div id="tom2_drop_target" class="tom2_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div id="crash_drop_target" class="crash_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
+                    <div id="ride_drop_target" class="ride_target_style" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                    </div>
+                    
+                    <div id="floor_tom_drop_target" class="floortom_target_style" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+
                 </div>
                 
-            </div>
+          </div>
     
         </body>
        

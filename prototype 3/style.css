@@ -31,6 +31,15 @@ body{
 
 /*Insert drumparts CSS styling here*/
 
+/*placeholder styling*/
+
+#part_div{
+    background-color: grey;
+    width:100px;
+    height: 20px;
+}
+
+/**/
 .high_hat_div{
     background-color: grey;
     width:100px;
